@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sum Of Three </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tables and Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        ul.styled-ul {
+            list-style-type: circle;
+            padding-left: 40px;
+        }
+        ul.styled-ul li {
+            margin-bottom: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        ul.styled-ul li:hover {
+            background-color: #e8f4fd;
+        }
+        ul.styled-ul ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+        ol.styled-ol {
+            list-style-type: lower-alpha;
+            padding-left: 40px;
+        }
+        ol.styled-ol li {
+            margin-bottom: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        ol.styled-ol li:hover {
+            background-color: #fdf2e8;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <table border="0" align="center" width="30%">
-        <tr>
-            <td>First Num :</td>
-            <td><input type="text" id="fno"></td>
-        </tr>
-        <tr>
-            <td>Second Num :</td>
-            <td><input type="text" id="sno"></td>
-        </tr>
-        <tr>
-            <td>Third Num :</td>
-            <td><input type="text" id="tno"></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="button" value="Sum" onclick="sum()"/>
-            </td>
-        </tr>
-    </table>
-
-    <script>
-        function sum(){
-            let a = document.getElementById("fno").value;
-            let b = document.getElementById("sno").value;
-            let c = document.getElementById("tno").value;
-
-            let d = parseInt(a) + parseInt(b) + parseInt(c);
-
-            alert("sum of three numbers is " + d);
-        }
-    </script>
+    <h1>Tables and Lists Example</h1>
     
+    <div class="container">
+        <h2>Unordered List</h2>
+        <ul class="styled-ul">
+            <li>This is first item of my unordered list</li>
+            <li>This is second item of my unordered list
+                <ul>
+                    <li>Another one</li>
+                    <li>Another two</li>
+                    <li>Another three</li>
+                </ul>
+            </li>
+            <li>This is third item of my unordered list</li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h2>Ordered List</h2>
+        <ol class="styled-ol">
+            <li>This is first item of my ordered list</li>
+            <li>This is second item of my ordered list</li>
+            <li>This is third item of my ordered list</li>
+        </ol>
+    </div>
 </body>
 </html>
