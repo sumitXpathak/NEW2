@@ -54,6 +54,17 @@
         input[type="button"]:hover {
             background-color: #7a3a8a;
         }
+
+        #resultCard {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: blueviolet;
+        }
     </style>
     <table border="0" align="center" width="30%">
         <tr>
@@ -75,6 +86,8 @@
         </tr>
     </table>
 
+    <div id="resultCard"></div>
+
     <script>
         function sum(){
             let a = document.getElementById("fno").value;
@@ -83,7 +96,7 @@
 
             let d = parseInt(a) + parseInt(b) + parseInt(c);
 
-            alert("sum of three numbers is " + d);
+            document.getElementById("resultCard").innerHTML = "Sum of three numbers is " + d;
         }
     </script>
   
