@@ -8,64 +8,22 @@
 <body>
     <style>
         body {
-            background-color: rgb(71, 116, 131);
-            color: blueviolet;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            margin: 0;
-            padding: 0;
+            background-color: lightblue;
+        }   
+
+        .box {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-        }
-
-        table {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid black;
+            width: 40%;
+            margin: auto;
             padding: 20px;
-        }
-
-        td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        input[type="button"] {
-            background-color: blueviolet;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-
-        input[type="button"]:hover {
-            background-color: #7a3a8a;
-        }
-
-        #resultCard {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 20px;
+            background-color: white;
             text-align: center;
-            font-size: 24px;
-            color: blueviolet;
         }
     </style>
+     <div  class="box">
     <table border="0" align="center" width="30%">
         <tr>
             <td>First Num :</td>
@@ -85,9 +43,7 @@
             </td>
         </tr>
     </table>
-
-    <div id="resultCard"></div>
-
+     </div>
     <script>
         function sum(){
             let a = document.getElementById("fno").value;
@@ -96,7 +52,7 @@
 
             let d = parseInt(a) + parseInt(b) + parseInt(c);
 
-            document.getElementById("resultCard").innerHTML = "Sum of three numbers is " + d;
+            alert("sum of three numbers is " + d);
         }
     </script>
   
