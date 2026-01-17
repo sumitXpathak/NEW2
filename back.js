@@ -1,5 +1,9 @@
-let bride= prompt("Enter your bride name");
+let basic= prompt("Enter your course");
 
-let groom= prompt("Enter your groom name");
+let advance= prompt("Enter your course");
 
-alert( bride + " weds " + groom);
+if(basic==="HTML" && advance==="CSS"){
+    alert("You are eligible for the course");
+} else{
+    alert("You are not eligible for the course");
+}   
